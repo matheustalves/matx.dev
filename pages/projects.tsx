@@ -10,7 +10,7 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import BuildIcon from '@mui/icons-material/Build';
 
 const Projects: NextPage = () => {
-    const [projectCategory, setprojectCategory] = useState('');
+    const [projectCategory, setprojectCategory] = useState('ml');
 
     const handleChange = (event: SelectChangeEvent) => {
         setprojectCategory(event.target.value);
@@ -29,7 +29,7 @@ const Projects: NextPage = () => {
                     <Typography variant="h4" fontWeight="bold">
                         projects
                     </Typography>
-                    <FormControl sx={{ m: 1, minWidth: 80 }} color="secondary">
+                    <FormControl sx={{ mx: 2, minWidth: 20 }} color="secondary">
                         <Select
                             id="simpleSelect"
                             value={projectCategory}
@@ -37,9 +37,9 @@ const Projects: NextPage = () => {
                             onChange={handleChange}
                             sx={{ background: '#7AA2F7', color: "#1A1B26" }}
                         >
-                            <MenuItem value={10}>Machine Learning</MenuItem>
-                            <MenuItem value={20}>Web Development</MenuItem>
-                            <MenuItem value={30}>Other</MenuItem>
+                            <MenuItem value="ml">Machine Learning</MenuItem>
+                            <MenuItem value="wd">Web Development</MenuItem>
+                            <MenuItem value="ot">Other</MenuItem>
                         </Select>
                     </FormControl>
                     <Box>
