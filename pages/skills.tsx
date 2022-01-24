@@ -15,14 +15,14 @@ const other = ['git', 'docker', 'azure', 'aws', 'linux', 'windows']
 
 const Skills: NextPage = () => {
     return (
-        <Container maxWidth="md" sx={{ p: 5, height: "100%", margin: "auto" }}>
+        <Container maxWidth="md" sx={{ p: 5 }}>
             <Head>
                 <title>skills | matx</title>
                 <meta name="description" content="skills matx." />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <Box display="flex" flexDirection="column" height="100%" alignContent="center" justifyContent="center">
+            <Box display="flex" flexDirection="column">
                 <Box display="flex" marginBottom={5} justifyContent="space-between" alignItems="center">
                     <Typography variant="h4" fontWeight="bold">
                         i&apos;m familiar with...

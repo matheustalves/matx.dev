@@ -17,40 +17,80 @@ const Projects: NextPage = () => {
     };
 
     return (
-        <Container maxWidth="md" sx={{ p: 5, height: "100%", margin: "auto" }}>
+        <Container maxWidth="md" sx={{ p: 5 }}>
             <Head>
                 <title>projects | matx</title>
                 <meta name="description" content="projects matx." />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <Box display="flex" flexDirection="column" height="100%" alignContent="center" justifyContent="center">
+            <Box display="flex" flexDirection="column">
                 <Box display="flex" marginBottom={5} justifyContent="space-between" alignItems="center">
                     <Typography variant="h4" fontWeight="bold">
                         projects
                     </Typography>
-                    <FormControl sx={{ mx: 2, minWidth: 20 }} color="secondary">
-                        <Select
-                            id="simpleSelect"
-                            value={projectCategory}
-                            autoWidth
-                            onChange={handleChange}
-                            sx={{ background: '#7AA2F7', color: "#1A1B26" }}
-                        >
-                            <MenuItem value="ml">Machine Learning</MenuItem>
-                            <MenuItem value="wd">Web Development</MenuItem>
-                            <MenuItem value="ot">Other</MenuItem>
-                        </Select>
-                    </FormControl>
+
                     <Box>
                         <Link href="/" color="secondary" sx={{ mr: 1 }}>home</Link>
                         <Link href="/about" color="secondary" sx={{ mx: 1 }}>about</Link>
                         <Link href="/skills" color="secondary" sx={{ ml: 1 }}>skills</Link>
                     </Box>
                 </Box>
+
+                <Paper elevation={6} sx={{ pt: 0 }}>
+                    <Box display="flex" justifyContent="center" sx={{ background: '#e2e7f5' }}>
+                        <FormControl sx={{ minWidth: 20 }} color="secondary" variant="standard">
+                            <Select
+                                id="simpleSelect"
+                                value={projectCategory}
+                                autoWidth
+                                onChange={handleChange}
+                                sx={{ background: '#e2e7f5', color: "#1A1B26" }}
+                            >
+                                <MenuItem value="ml">
+                                    <Box display="flex" alignContent="center" justifyContent="center" p={1} pb={0}>
+                                        <Box sx={{ mx: 1 }}>
+                                            <VisibilityIcon color="success" />
+                                        </Box>
+                                        <Typography variant="subtitle2" fontWeight="bold" color="success">
+                                            Machine Learning
+                                        </Typography>
+                                    </Box>
+                                </MenuItem>
+                                <MenuItem value="wd">
+                                    <Box display="flex" alignContent="center" justifyContent="center" p={1} pb={0}>
+                                        <Box sx={{ mx: 1 }}>
+                                            <WebIcon color="secondary" />
+                                        </Box>
+                                        <Typography variant="subtitle2" fontWeight="bold" color="success">
+                                            Web Development
+                                        </Typography>
+                                    </Box>
+                                </MenuItem>
+                                <MenuItem value="ot">
+                                    <Box display="flex" alignContent="center" justifyContent="center" p={1} pb={0}>
+                                        <Box sx={{ mx: 1 }}>
+                                            <BuildIcon color="warning" />
+                                        </Box>
+                                        <Typography variant="subtitle2" fontWeight="bold" color="success">
+                                            Other
+                                        </Typography>
+                                    </Box>
+                                </MenuItem>
+                            </Select>
+                        </FormControl>
+                    </Box>
+
+                    <Grid item container spacing={5}>
+                        <Grid item sx={{ background: '#FF9E64' }}></Grid>
+                        <Grid item sx={{ background: '#FF9E64' }}></Grid>
+                        <Grid item sx={{ background: '#FF9E64' }}></Grid>
+                        <Grid item sx={{ background: '#FF9E64' }}></Grid>
+                        <Grid item sx={{ background: '#FF9E64' }}></Grid>
+                        <Grid item sx={{ background: '#FF9E64' }}></Grid>
+                    </Grid>
+                </Paper>
             </Box>
-
-
         </Container >
     )
 }
