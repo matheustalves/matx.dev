@@ -9,7 +9,11 @@ import StorageIcon from '@mui/icons-material/Storage';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import BuildIcon from '@mui/icons-material/Build';
 
+import projectsData from '../public/data'
+
 const Projects: NextPage = () => {
+
+
     const [projectCategory, setprojectCategory] = useState('ml');
 
     const handleChange = (event: SelectChangeEvent) => {
