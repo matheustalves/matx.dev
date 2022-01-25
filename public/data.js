@@ -10,7 +10,7 @@ export const projectsData = {
             title: ".NET Clinic CRUD App",
             description: "Simple CRUD application for medical clinics.",
             stack: [".net mvc", "bootstrap", "ms sql server"],
-            link: "http://clinica-matx.somee.com/"
+            link: "https://clinica-matx.somee.com/"
         },
         {
             title: "Dataset Enhancer",
@@ -50,6 +50,18 @@ export const projectsData = {
             description: "A Complete Compiler (Lexer, Parser, Code Gen for Assembly x64) for a C subset language.",
             stack: ["java", "assembly", "nasm"],
             link: "https://github.com/matheustalves/L-Language-Compiler"
+        },
+        {
+            title: "Runescape Clicker",
+            description: "An open source Runescape Clicker with gui.",
+            stack: ["python", "tkinter", "pynput"],
+            link: "https://github.com/matheustalves/RunescapeClicker"
+        },
+        {
+            title: "Java Data Structures from Scratch",
+            description: "Famous data structures from scratch for a custom class.",
+            stack: ["java"],
+            link: "https://github.com/matheustalves/Java-Data-Structures"
         },
     ]
 }
