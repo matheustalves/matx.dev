@@ -1,3 +1,9 @@
+export const langs = ['python', 'c++', 'java', 'c#', 'javascript', 'typescript']
+export const webDev = ['react', 'next.js', 'node.js', '.net', 'django', 'flask', 'apis', 'frameworks']
+export const databases = ['ms sql server', 'mysql', 'mongodb', 'firebase', 'sqlite']
+export const ml = ['numpy', 'pytorch', 'tensorflow', 'tk', 'opencv']
+export const other = ['git', 'docker', 'azure', 'aws', 'linux', 'windows']
+
 type projectItem = {
     title: string,
     description: string,

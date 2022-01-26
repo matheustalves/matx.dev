@@ -1,13 +1,13 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: Roboto;
-  background-color: #1A1B26;
-  color: #e2e7f5;
+    padding: 0;
+    margin: 0;
+    font-family: Roboto;
+    background-color: #1a1b26;
+    color: #e2e7f5;
 }
 
-.projectItemImage{
-  border: 10px solid #7AA2F7;
-  border-radius: '10px';
+.projectItemImage {
+    border: 10px solid #7aa2f7;
+    border-radius: "10px";
 }
