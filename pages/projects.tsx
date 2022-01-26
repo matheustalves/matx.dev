@@ -10,15 +10,11 @@ import {
     Grid,
     Paper,
     FormControl,
-    InputLabel,
     MenuItem,
-    Avatar,
     Chip,
 } from "@mui/material";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
-import LanguageIcon from "@mui/icons-material/Language";
 import WebIcon from "@mui/icons-material/Web";
-import StorageIcon from "@mui/icons-material/Storage";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import BuildIcon from "@mui/icons-material/Build";
 

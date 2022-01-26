@@ -10,8 +10,6 @@ import {
     Link,
     Grid,
 } from "@mui/material";
-import Button from "@mui/material/Button";
-import styles from "../styles/Home.module.css";
 
 const About: NextPage = () => {
     return (
