@@ -6,3 +6,8 @@ body {
   background-color: #1A1B26;
   color: #e2e7f5;
 }
+
+.projectItemImage{
+  border: 10px solid #7AA2F7;
+  border-radius: '10px';
+}

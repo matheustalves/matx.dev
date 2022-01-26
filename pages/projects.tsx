@@ -15,7 +15,8 @@ type projectItem = {
     description: string,
     stack: string[],
     link: string,
-    img: string
+    img: string,
+    colors: string[],
 }
 
 const projectsData: { [key: string]: projectItem[] } = {
@@ -25,14 +26,16 @@ const projectsData: { [key: string]: projectItem[] } = {
             description: "Simple CRUD application for medical clinics.",
             stack: ["node", "express", "bootstrap", "mongodb"],
             link: "https://clinica-matx.herokuapp.com/",
-            img: "/clinic.gif"
+            img: "/clinic.gif",
+            colors: ['#50f27b', '#50e5f2', '#f25096', '#f2f250']
         },
         {
             title: "Dataset Enhancer",
             description: "Generates samples for Neural Networks using Data Augmentation.",
             stack: ["python", "django", "tensorflow", "bootstrap"],
             link: "https://datasetenhancer.pythonanywhere.com/",
-            img: "/de.gif"
+            img: "/de.gif",
+            colors: ['#5094f2', '#acf250', '#f27950', '#f25096']
 
         },
         {
@@ -40,16 +43,16 @@ const projectsData: { [key: string]: projectItem[] } = {
             description: "My personal website.",
             stack: ["next.js", "material ui", "vercel"],
             link: "/",
-            img: "/personal.gif"
-
+            img: "/personal.gif",
+            colors: ['#f25050', '#8650f2', '#c6f5c8']
         },
         {
             title: ".NET Clinic CRUD App",
             description: "Simple CRUD application for medical clinics.",
             stack: [".net mvc", "bootstrap", "ms sql server"],
             link: "https://clinica-matx.somee.com/",
-            img: "/clinic.gif"
-
+            img: "/clinic.gif",
+            colors: ['#6050f2', '#f25096', '#f2f250']
         },
     ],
     "ml": [
@@ -58,24 +61,24 @@ const projectsData: { [key: string]: projectItem[] } = {
             description: "Data System with GUI for breast cancer classification and image processing.",
             stack: ["python", "tkinter", "numpy", "sk"],
             link: "https://github.com/matheustalves/BIRADS-Classifier",
-            img: "/birads.png"
-
+            img: "/birads.png",
+            colors: ['#5094f2', '#f2506b', '#e7f250', '#ea50f2']
         },
         {
             title: "CNN MMORPG BOT",
             description: "Bot for a videogame using a convolutional neural net and computer vision.",
             stack: ["python", "pytorch", "numpy", "opencv"],
             link: "https://github.com/matheustalves/rs-netbot",
-            img: "/bot.gif"
-
+            img: "/bot.gif",
+            colors: ['#5094f2', '#f27950', '#e7f250', '#50f263']
         },
         {
             title: "Dataset Enhancer",
             description: "Generates samples for Neural Networks using Data Augmentation.",
             stack: ["python", "django", "tensorflow", "bootstrap"],
             link: "https://datasetenhancer.pythonanywhere.com/",
-            img: "/de.gif"
-
+            img: "/de.gif",
+            colors: ['#5094f2', '#acf250', '#f27950', '#f25096']
         },
     ],
     "ot": [
@@ -84,23 +87,24 @@ const projectsData: { [key: string]: projectItem[] } = {
             description: "A Complete Compiler (Lexer, Parser, Code Gen for Assembly x64) for a C subset language.",
             stack: ["java", "assembly", "nasm"],
             link: "https://github.com/matheustalves/L-Language-Compiler",
-            img: "/nasm.png"
-
+            img: "/nasm.png",
+            colors: ['#f26868', '#68f2bd', '#f268ee']
         },
         {
             title: "Runescape Clicker",
             description: "An open source Runescape Clicker with gui.",
             stack: ["python", "tkinter", "pynput"],
             link: "https://github.com/matheustalves/RunescapeClicker",
-            img: "/rsc.png"
-
+            img: "/rsc.png",
+            colors: ['#5094f2', '#f2506b', '#68f294']
         },
         {
             title: "Java Data Structures from Scratch",
             description: "Famous data structures from scratch for a custom class.",
             stack: ["java"],
             link: "https://github.com/matheustalves/Java-Data-Structures",
-            img: "/java.png"
+            img: "/java.png",
+            colors: ['#f26868']
         },
     ]
 }
@@ -179,7 +183,7 @@ const Projects: NextPage = () => {
 
                 <Grid container sx={{ m: 0, p: 3, maxHeight: "100%", maxWidth: "100%" }} alignItems="center" alignContent="center" justifyContent="center" textAlign="center">
                     {projectsData[projectCategory].map((item, index) => (
-                        <Grid container key={index} spacing={3} sx={{ p: 2, maxHeight: "100%", maxWidth: "100%" }} alignItems="center" alignContent="center" justifyContent="center" textAlign="center">
+                        <Grid container key={index} spacing={2} sx={{ p: 1, maxHeight: "100%", maxWidth: "100%" }} alignItems="center" alignContent="center" justifyContent="center" textAlign="center">
                             <Grid item sm={12} md={6} sx={{ maxHeight: "100%", maxWidth: "100%" }}>
                                 <Box sx={{ my: 1 }}>
                                     <Typography variant="h5" fontWeight="bold">
@@ -191,19 +195,22 @@ const Projects: NextPage = () => {
                                         {item.description}
                                     </Typography>
                                 </Box>
-                                <Box sx={{ mt: 3 }}>
+                                <Box sx={{ mt: 2 }}>
                                     {item.stack.map((stackItem, stackIndex) => {
-                                        return <Chip label={stackItem} key={stackIndex} size="small" sx={{ m: .5, background: '#73DACA', color: '#1A1B26' }} />
+                                        return <Chip label={stackItem} key={stackIndex} size="small" sx={{ m: .5, background: item.colors[stackIndex], color: '#000000' }} />
                                     })}
                                 </Box>
                             </Grid>
                             <Grid item sm={12} md={6} sx={{ height: "100%", width: "100%" }}>
-                                <Box sx={{ background: '#24283B', border: '3px solid #7AA2F7', borderRadius: '10px', height: "100%", width: "100%" }}>
+                                <Box sx={{ background: '#24283B', height: "100%", width: "100%", position: "relative" }}>
                                     <Image
                                         alt="itemImg"
                                         src={item.img}
-                                        width={250}
-                                        height={250}
+                                        layout='responsive'
+                                        objectFit='contain'
+                                        width="100%"
+                                        height="100%"
+                                        className="projectItemImage"
                                     />
                                 </Box>
                             </Grid>
