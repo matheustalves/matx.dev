@@ -30,11 +30,12 @@ const Skills: NextPage = () => {
                     <Box>
                         <Link href="/" color="secondary" sx={{ mr: 1 }}>home</Link>
                         <Link href="/about" color="secondary" sx={{ mx: 1 }}>about</Link>
+                        <Link href="/skills" color="inherit" sx={{ mx: 1 }} >skills</Link>
                         <Link href="/projects" color="secondary" sx={{ ml: 1 }}>projects</Link>
                     </Box>
                 </Box>
 
-                <Paper elevation={6} sx={{ p: 5 }}>
+                <Paper elevation={6} sx={{ p: 5, borderRadius: '10px' }}>
                     <Grid container spacing={5} >
                         <Grid container item direction="column" spacing={2} md={6}>
                             <Grid item container direction="row" alignItems="center" >
