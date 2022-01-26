@@ -21,7 +21,7 @@ const Skills: NextPage = () => {
             <Grid container spacing={3} marginBottom={5} alignItems="center">
                 <Grid item sm={6}>
                     <Typography variant="h4" fontWeight="bold">
-                        projects
+                        skills
                     </Typography>
                 </Grid>
                 <Grid item sm={6}>

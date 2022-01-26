@@ -223,7 +223,6 @@ const Projects: NextPage = () => {
                                         objectFit="contain"
                                         width="100%"
                                         height="100%"
-                                        className="projectItemImage"
                                     />
                                 </Box>
                             </Grid>
