@@ -36,69 +36,69 @@ const Skills: NextPage = () => {
                 </Box>
 
                 <Paper elevation={6} sx={{ p: 5, borderRadius: '10px' }}>
-                    <Grid container spacing={5} >
-                        <Grid container item direction="column" spacing={2} md={6}>
-                            <Grid item container direction="row" alignItems="center" >
+                    <Grid container spacing={10} >
+                        <Grid container item direction="column" spacing={2} md={12} >
+                            <Grid item container direction="row" alignItems="center" textAlign="center" alignContent="center" justifyContent="center" >
                                 <LanguageIcon color="primary" />
                                 <Typography variant="h5" color="primary" sx={{ mx: 2 }}>
                                     programming languages
                                 </Typography>
                             </Grid>
-                            <Grid container item spacing={2} justifyContent="center">
+                            <Grid container item spacing={3} alignItems="center" textAlign="center" alignContent="center" justifyContent="center">
                                 {langs.map((item, index) => (
-                                    <Grid item key={index} xs={6}>&rsaquo; {item}</Grid>
+                                    <Grid item key={index}>{item}</Grid>
                                 ))}
                             </Grid>
                         </Grid>
-                        <Grid container item direction="column" spacing={2} md={6}>
-                            <Grid item container direction="row" alignItems="center">
+                        <Grid container item direction="column" spacing={2} md={12}>
+                            <Grid item container direction="row" alignItems="center" textAlign="center" alignContent="center" justifyContent="center">
                                 <WebIcon color="secondary" />
                                 <Typography variant="h5" color="secondary" sx={{ mx: 2 }}>
                                     web dev
                                 </Typography>
                             </Grid>
-                            <Grid container item spacing={2}>
+                            <Grid container item spacing={3} alignItems="center" textAlign="center" alignContent="center" justifyContent="center">
                                 {webDev.map((item, index) => (
-                                    <Grid item key={index} xs={6}>&rsaquo; {item}</Grid>
+                                    <Grid item key={index}>{item}</Grid>
                                 ))}
                             </Grid>
                         </Grid>
-                        <Grid container item direction="column" spacing={2} md={6}>
-                            <Grid item container direction="row" alignItems="center">
+                        <Grid container item direction="column" spacing={2} md={12}>
+                            <Grid item container direction="row" alignItems="center" textAlign="center" alignContent="center" justifyContent="center">
                                 <StorageIcon color="error" />
                                 <Typography variant="h5" color="error" sx={{ mx: 2 }}>
                                     databases
                                 </Typography>
                             </Grid>
-                            <Grid container item spacing={2}>
+                            <Grid container item spacing={3} alignItems="center" textAlign="center" alignContent="center" justifyContent="center">
                                 {databases.map((item, index) => (
-                                    <Grid item key={index} xs={6}>&rsaquo; {item}</Grid>
+                                    <Grid item key={index}>{item}</Grid>
                                 ))}
                             </Grid>
                         </Grid>
-                        <Grid container item direction="column" spacing={2} md={6}>
-                            <Grid item container direction="row" alignItems="center">
+                        <Grid container item direction="column" spacing={2} md={12}>
+                            <Grid item container direction="row" alignItems="center" textAlign="center" alignContent="center" justifyContent="center">
                                 <VisibilityIcon color="success" />
                                 <Typography variant="h5" color="#9ECE6A" sx={{ mx: 2 }}>
                                     machine learning
                                 </Typography>
                             </Grid>
-                            <Grid container item spacing={2}>
+                            <Grid container item spacing={3} alignItems="center" textAlign="center" alignContent="center" justifyContent="center">
                                 {ml.map((item, index) => (
-                                    <Grid item key={index} xs={6}>&rsaquo; {item}</Grid>
+                                    <Grid item key={index}>{item}</Grid>
                                 ))}
                             </Grid>
                         </Grid>
-                        <Grid container item direction="column" spacing={2} md={6}>
-                            <Grid item container direction="row" alignItems="center">
+                        <Grid container item direction="column" spacing={2} md={12}>
+                            <Grid item container direction="row" alignItems="center" textAlign="center" alignContent="center" justifyContent="center">
                                 <BuildIcon color="warning" />
                                 <Typography variant="h5" color="#FF9E64" sx={{ mx: 2 }}>
                                     other
                                 </Typography>
                             </Grid>
-                            <Grid container item spacing={2}>
+                            <Grid container item spacing={3} alignItems="center" textAlign="center" alignContent="center" justifyContent="center">
                                 {other.map((item, index) => (
-                                    <Grid item key={index} xs={6}>&rsaquo; {item}</Grid>
+                                    <Grid item key={index}>{item}</Grid>
                                 ))}
                             </Grid>
                         </Grid>
