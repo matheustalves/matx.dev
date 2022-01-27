@@ -69,7 +69,11 @@ const About: NextPage = () => {
                         >
                             Hello,
                         </Typography>
-                        <Typography variant="body1" textAlign="justify">
+                        <Typography
+                            variant="body1"
+                            textAlign="justify"
+                            lineHeight={1.8}
+                        >
                             My name is Matheus Teixeira and I&apos;m a software
                             engineer from Brazil. I&apos;m currently in the last
                             semester of graduation in computer science at
@@ -93,19 +97,19 @@ const About: NextPage = () => {
                                 href="mailto:matheustalves@outlook.com"
                                 marginX={1}
                             >
-                                <EmailIcon />
+                                <EmailIcon fontSize="large" />
                             </Link>
                             <Link
                                 href="https://github.com/matheustalves"
                                 marginX={1}
                             >
-                                <GitHubIcon />
+                                <GitHubIcon fontSize="large" />
                             </Link>
                             <Link
                                 href="https://wa.me/+5531983973383"
                                 marginX={1}
                             >
-                                <WhatsAppIcon />
+                                <WhatsAppIcon fontSize="large" />
                             </Link>
                         </Box>
                     </Grid>

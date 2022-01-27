@@ -6,3 +6,12 @@ body {
     background-color: #1a1b26;
     color: #e2e7f5;
 }
+
+@media (max-width: 512px) {
+    #boxTextLeft {
+        text-align: center;
+    }
+    #boxTextRight {
+        text-align: center;
+    }
+}

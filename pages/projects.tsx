@@ -17,6 +17,7 @@ import Select, { SelectChangeEvent } from "@mui/material/Select";
 import WebIcon from "@mui/icons-material/Web";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import BuildIcon from "@mui/icons-material/Build";
+import LaunchIcon from "@mui/icons-material/Launch";
 
 import { projectsData } from "../utils/data";
 
@@ -174,10 +175,27 @@ const Projects: NextPage = () => {
                                 md={6}
                                 sx={{ maxHeight: "100%", maxWidth: "100%" }}
                             >
-                                <Box sx={{ my: 1 }}>
-                                    <Typography variant="h5" fontWeight="bold">
+                                <Box
+                                    display="flex"
+                                    flexWrap="wrap"
+                                    justifyContent="center"
+                                    alignContent="center"
+                                    alignItems="center"
+                                >
+                                    <Typography
+                                        variant="h5"
+                                        fontWeight="bold"
+                                        margin={1}
+                                    >
                                         {item.title}
                                     </Typography>
+                                    <Link
+                                        href={item.link}
+                                        target="_blank"
+                                        margin={1}
+                                    >
+                                        <LaunchIcon />
+                                    </Link>
                                 </Box>
                                 <Box sx={{ my: 1 }}>
                                     <Typography variant="caption">

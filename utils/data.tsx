@@ -112,7 +112,7 @@ export const projectsData: { [key: string]: projectItem[] } = {
         },
         {
             title: "Runescape Clicker",
-            description: "An open source Runescape Clicker with gui.",
+            description: "An open source Runescape Clicker with GUI.",
             stack: ["python", "tkinter", "pynput"],
             link: "https://github.com/matheustalves/RunescapeClicker",
             img: "/rsc.png",

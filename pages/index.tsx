@@ -3,12 +3,14 @@ import Head from "next/head";
 import Image from "next/image";
 import { Container, Typography, Avatar, Box, Link, Grid } from "@mui/material";
 
+import avatar from "../public/avatar.gif";
+
 const Home: NextPage = () => {
     return (
         <div>
             <Container
                 maxWidth="lg"
-                sx={{ p: 4, height: "100%", margin: "auto" }}
+                sx={{ p: 5, height: "100%", margin: "auto" }}
             >
                 <Head>
                     <title>matheus teixeira</title>
@@ -29,13 +31,15 @@ const Home: NextPage = () => {
                     }}
                 >
                     <Grid item xs={12} md={6}>
-                        <Avatar
-                            alt="Avatar"
-                            src="/g.gif"
-                            sx={{ width: "auto", height: "auto" }}
-                        />
+                        <Image alt="Avatar" src={avatar} />
                     </Grid>
-                    <Grid item xs={12} md={6} sx={{ textAlign: "left", p: 3 }}>
+                    <Grid
+                        item
+                        xs={12}
+                        md={6}
+                        sx={{ textAlign: "left", p: 3 }}
+                        id="boxTextLeft"
+                    >
                         <Typography variant="h4">hi, my name is</Typography>
                         <Typography
                             variant="h2"
@@ -44,13 +48,17 @@ const Home: NextPage = () => {
                         >
                             matheus teixeira.
                         </Typography>
-                        <Box textAlign="right" sx={{ my: 3 }}>
+                        <Box
+                            textAlign="center"
+                            sx={{ my: 3 }}
+                            id="boxTextRight"
+                        >
                             <Typography variant="body1" color="#C0CAF5">
                                 i&apos;m a developer who enjoys over-engineering
                                 stuff.
                             </Typography>
                         </Box>
-                        <Box textAlign="right">
+                        <Box textAlign="right" id="boxTextRight">
                             <Link
                                 href="/about"
                                 color="secondary"
