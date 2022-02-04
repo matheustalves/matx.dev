@@ -46,6 +46,14 @@ export const projectsData: { [key: string]: projectItem[] } = {
             colors: ["#50f27b", "#50e5f2", "#f25096", "#f2f250"],
         },
         {
+            title: "Hackr News",
+            description: "Hacker News top stories with a better minimalist UI.",
+            stack: ["react", "typescript", "tailwind", "api"],
+            link: "https://hcker-news.netlify.app/",
+            img: "/hn.gif",
+            colors: ["#56b6cc", "#50f2a9", "#5c56cc", "#ffaa00"],
+        },
+        {
             title: "Dataset Enhancer",
             description:
                 "Generates samples for Neural Networks using Data Augmentation.",
@@ -57,10 +65,10 @@ export const projectsData: { [key: string]: projectItem[] } = {
         {
             title: "This Website",
             description: "My personal website.",
-            stack: ["next.js", "material ui", "vercel"],
+            stack: ["next.js", "typescript", "material ui", "vercel"],
             link: "/",
             img: "/personal.gif",
-            colors: ["#f25050", "#8650f2", "#c6f5c8"],
+            colors: ["#f25050", "#50f2a9", "#8650f2", "#c6f5c8"],
         },
         {
             title: ".NET Clinic CRUD App",
